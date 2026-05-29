@@ -1,0 +1,243 @@
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f5fbff;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Barra de navegación */
+.navbar {
+    background: #00a8e8;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+
+.navbar h1 {
+    color: white;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contenedor principal */
+.main-content {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Línea animada debajo */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: white;
+    transition: 0.4s ease;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Secciones */
+.section-box {
+    background: white;
+    margin: 25px 0;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Botones llamativos */
+.btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 15px 10px;
+    transition: 0.3s;
+}
+
+/* Botón azul */
+.btn-primary {
+    background: #00c2ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #009ed1;
+    transform: scale(1.08);
+}
+
+/* Botón naranja */
+.btn-secondary {
+    background: #ff8c42;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #ff6a00;
+    transform: scale(1.08);
+}
+
+/* Pie de página */
+.footer {
+    background: #003049;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+/* Imagen principal */
+.hero-img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.5s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.03);
+}
+
+/* Animaciones al hacer scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto flotante para secciones */
+.section-box:hover {
+    transform: translateY(-8px);
+    transition: 0.4s ease;
+}
+
+/* Fondo dinámico */
+.body {
+    background: linear-gradient(-45deg, #e0f7ff, #ffffff, #dff6ff, #f0fbff);
+    background-size: 400% 400%;
+    animation: fondoAnimado 12s ease infinite;
+}
+
+@keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* Carrusel de destinos */
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-slide {
+    display: none;
+    text-align: center;
+    animation: fadeEffect 1s;
+}
+
+.active-slide {
+    display: block;
+}
+
+.destination-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.destination-img:hover {
+    transform: scale(1.04);
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-slide h3 {
+    color: #00a8e8;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.carousel-slide p {
+    font-size: 17px;
+    margin: 8px 0;
+}
+/* Animación de entrada navbar */
+.navbar {
+    animation: slideDown 1s ease;
+}
+
+/* Links animados */
+.nav-link {
+    position: relative;
+    transition: 0.3s;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+}
+
+/* Animación al cargar */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+a { 
+    color: white; 
+    text-decoration: none; 
+}

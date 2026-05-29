@@ -1,0 +1,200 @@
+/* =========================
+   ESTILO BASE
+========================= */
+
+.body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef8fd, #f8fbff);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+/* Barra de navegación */
+.navbar {
+    background: #00a8e8;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    animation: slideDown 1s ease;
+}
+
+.navbar h1 {
+    color: white;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: white;
+    transition: 0.4s ease;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #003049;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 40px;
+    transition: 0.4s ease;
+}
+
+.footer:hover {
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* INTRODUCCIÓN */
+
+.destination-intro {
+    text-align: center;
+    padding: 50px 30px;
+    background: rgba(245, 248, 252, 0.88);
+    border-radius: 28px;
+    margin: 30px auto;
+    box-shadow: 0px 10px 25px rgba(0,168,232,0.08);
+}
+
+.intro-title {
+    font-size: 36px;
+    color: #008fc7;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 18px;
+    color: #4a5568;
+}
+
+/* GRID DESTINOS */
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* TARJETAS */
+
+.destination-card {
+    background: rgba(245, 248, 252, 0.88);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0,168,232,0.08);
+    transition: 0.4s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.destination-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.destination-title {
+    color: #008fc7;
+    font-size: 24px;
+}
+
+.destination-description {
+    color: #4a5568;
+    margin: 15px 0;
+}
+
+/* BOTÓN */
+
+.destination-button {
+    background: #00a8e8;
+    color: white;
+    border: none;
+    padding: 14px 26px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.destination-button:hover {
+    transform: scale(1.05);
+    background: #0091cc;
+}

@@ -1,0 +1,232 @@
+/* =========================
+   ESTILO GENERAL
+========================= */
+
+.body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef8fd, #f8fbff);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* =========================
+   NAVBAR (IGUAL AL INDEX)
+========================= */
+
+.navbar {
+    background: #00a8e8;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    animation: slideDown 1s ease;
+}
+
+.navbar h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+}
+
+/* =========================
+   ANIMACIÓN NAVBAR
+========================= */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CONTENEDOR CONTACTO
+========================= */
+
+.contact-main {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* =========================
+   TARJETAS CONTACTO
+========================= */
+
+.contact-section {
+    background: rgba(245, 248, 252, 0.88);
+    backdrop-filter: blur(8px);
+    border-radius: 28px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 168, 232, 0.08);
+    transition: all 0.4s ease;
+}
+
+.contact-section:hover {
+    transform: translateY(-6px);
+}
+
+.contact-section h2 {
+    color: #008fc7;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.contact-section p {
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 22px;
+    background: #f7fbfe;
+    font-size: 15px;
+    outline: none;
+    transition: 0.35s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    box-shadow: 0 0 15px rgba(0,168,232,0.18);
+    background: white;
+}
+
+.form-textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+/* =========================
+   BOTÓN
+========================= */
+
+.contact-btn {
+    border: none;
+    border-radius: 30px;
+    padding: 16px;
+    background: linear-gradient(135deg, #00a8e8, #4cc9f0);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.contact-btn:hover {
+    transform: scale(1.04);
+}
+
+/* =========================
+   REVEAL SCROLL
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+FOOTER (IGUAL AL INDEX)
+========================= */
+
+.footer {
+    background: #003049;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 30px;
+    transition: 0.4s ease;
+}
+
+.footer:hover {
+    letter-spacing: 0.5px;
+}
+
+/* LINKS NAVBAR */
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+/* EFECTO HOVER */
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+}
+
+/* LÍNEA ANIMADA */
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    background: white;
+    transition: 0.4s ease;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
